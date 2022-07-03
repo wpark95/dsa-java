@@ -39,10 +39,10 @@ public class QuickSort {
         //  1. if the current array element is less than the pivot
         //      a. increment "top" by 1
         //      b. swap the two numbers at the "top" position and the current array index
-        // once the loop is over, swap the values at index "top" with the last iteration position
-        // this will move the pivot at the end of the array to the top position
-        // finally, return the top value + 1
-        // this will become the position of the new pivot for the next recursion
+        //  2. once the loop is over, swap the values at index "top+1" with "end" position
+        //     this will move the pivot at the end of the array to the "top+1" position
+        //  3. finally, return the top value + 1
+        //     this will become the position of the new pivot for the next recursion
     }
 
     private void swap(int[] numbers, int j, int k) {
