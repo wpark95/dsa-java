@@ -24,7 +24,6 @@ public class SinglyLinkedList<V> {
         if (firstNode!=null){
             LinkedListNode<V> node = head.getNext();
             if (node!=null){
-                LinkedListNode<V> tempNode = node;
                 this.head.setNext(null);
                 this.head = node;
             }
