@@ -23,7 +23,7 @@ public class QuickSort {
             System.out.print(numbers[a] + "_");
         }
         System.out.print("-" + numbers[pivot] + "-");
-        for (int a=pivot+1; a<end; a++){
+        for (int a=pivot+1; a<=end; a++){
             System.out.print(numbers[a] + "_");
         }
         System.out.println("\n");
