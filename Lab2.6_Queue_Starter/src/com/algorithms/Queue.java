@@ -15,27 +15,29 @@ public class Queue<V> {
     }
 
     public void enqueue(V item) {
-//     add an item to the queue
-//     pseudo code
-//        create new node from item, null previous and next
-//        if head is null:
-//            point head and tail at new node
-//        else:
-//            set tail next to new node
-//            set new node's previous to tail
-//            set tail to new node
+        // add an item to the queue
+        // TODO-Lab2.6: Implement the logic below
+        // pseudo code
+        //    create new node from item, null previous and next
+        //    if head is null:
+        //        point head and tail at new node
+        //    else:
+        //        set tail next to new node
+        //        set new node's previous to tail
+        //        set tail to new node
     }
 
     public V dequeue() {
-//     get and remove an item from the queue
-//     pseudo code
-//        1. if head is null
-//              return null
-//        2. node = the node head is pointing at
-//        3. head = head.next
-//        4. if head is not null:
-//                set head previous to null
-//        5. return node.value
+        // get and remove an item from the queue
+        // TODO-Lab2.6: Implement the logic below
+        // pseudo code
+        //    1. if head is null
+        //          return null
+        //    2. node = the node head is pointing at
+        //    3. head = head.next
+        //    4. if head is not null:
+        //            set head previous to null
+        //    5. return node.value
         return null;
     }
 

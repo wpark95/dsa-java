@@ -21,7 +21,7 @@ public class SinglyLinkedListTest {
         custList.addFront(new Customer(78901, "Gregory Smith", 855));
     }
 
-    //TODO design and implement addFront tests if time permits
+    // TODO-Lab2.5: design and implement "addFront" tests if time permits
 
     @Test
     public void deleteFrontPositive() {
@@ -62,7 +62,8 @@ public class SinglyLinkedListTest {
 
     @Test
     public void toStringPositive() {
-        // implement this test if there's time
+        // TODO-Lab2.5: implement this test if time permits
+
     }
 
 }

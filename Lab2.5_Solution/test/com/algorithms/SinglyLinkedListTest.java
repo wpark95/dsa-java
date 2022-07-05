@@ -20,8 +20,6 @@ public class SinglyLinkedListTest {
         custList.addFront(new Customer(78901, "Gregory Smith", 855));
     }
 
-    //TODO design and implement addFront tests if time permits
-
     @Test
     public void deleteFrontPositive() {
         custList.deleteFront();

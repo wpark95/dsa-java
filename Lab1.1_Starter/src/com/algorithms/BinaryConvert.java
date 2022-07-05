@@ -7,7 +7,7 @@ public class BinaryConvert {
     }
 
     public static int convertFromBinary(String binary){
-// return calculated decimal int converted from String binary
+        // TODO-Lab1.1: return calculated decimal value converted from String binary
         return 0;
     }
 

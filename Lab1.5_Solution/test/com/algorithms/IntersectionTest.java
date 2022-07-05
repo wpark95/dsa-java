@@ -55,7 +55,6 @@ public class IntersectionTest {
         assertEquals(expected, result);
     }
 
-    // negative paths
     @Test
     public void testEmptyIntersectionEmptyArraysPositive() {
         int[] numbers1 = new int[]{};

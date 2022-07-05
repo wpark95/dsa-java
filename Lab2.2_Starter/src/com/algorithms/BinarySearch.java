@@ -6,13 +6,8 @@ public class BinarySearch {
     }
 
     private static boolean binarySearch(int target, int[] array, int start, int end){
-//        binarySearch(x, array, start, end)
-//        if(start <= end)
-//            mid = (end - start) / 2 + start
-//        if (array[mid] == x) return true
-//        if (array[mid] > x) return binarySearch(x, array, start, mid - 1)
-//        return binarySearch(x, array, mid + 1, end)
-//        return false
+
+        // TODO-Lab2.2: Implement binary search logic here using recursion
         return false;
     }
 

@@ -1,5 +1,6 @@
 package com.algorithms;
 import java.util.Arrays;
+
 public class QuickSort {
     public void sort(int[] numbers) {
         if (numbers != null) {
@@ -19,7 +20,7 @@ public class QuickSort {
             return;
         }
         int p = partition(numbers, start, end);
-        printPartitions(numbers, p, start, end+1);
+        printPartitions(numbers, p, start, end);
         sort(numbers, start, p - 1);
         sort(numbers, p + 1, end);
     }
@@ -29,24 +30,24 @@ public class QuickSort {
             System.out.print(numbers[a] + "_");
         }
         System.out.print("-" + numbers[pivot] + "-");
-        for (int a=pivot+1; a<end; a++){
+        for (int a=pivot+1; a<=end; a++){
             System.out.print(numbers[a] + "_");
         }
         System.out.println("\n");
     }
 
     private int partition(int[] numbers, int start, int end) {
-        // get the value at the pivot (at array index "end"
-        // start a variable called "top" just below the start
-        // "top" will represent the top of the lower partition
-        // iterate from start to end...each time:
+        // - get the value at the pivot (at array index "end")
+        // - start a variable called "top" just below the start
+        //   ("top" will represent the top of the lower partition)
+        // - iterate from start to end...each time:
         //  1. if the current array element is less than the pivot
         //      a. increment "top" by 1
         //      b. swap the two numbers at the "top" position and the current array index
-        // once the loop is over, swap the values at index "top" with the last iteration position
-        // this will move the pivot at the end of the array to the top position
-        // finally, return the top value + 1
-        // this will become the position of the new pivot for the next recurse
+        //  2. once the loop is over, swap the values at index "top+1" with "end" position
+        //     this will move the pivot at the end of the array to the "top+1" position
+        //  3. finally, return the top value + 1
+        //     this will become the position of the new pivot for the next recursion
         int pivot = numbers[end];
         int x = start - 1;
         for (int i = start; i < end; i++) {
@@ -60,9 +61,9 @@ public class QuickSort {
     }
 
     private void swap(int[] numbers, int j, int k) {
-        // initialize a temporary int variable with the value at numbers[j]
-        // copy the value at position j with the value at position k
-        // copy the value in the temporary variable into numbers[k]
+        // - initialize a temporary int variable with the value at numbers[j]
+        // - copy the value at position j with the value at position k
+        // - copy the value in the temporary variable into numbers[k]
         int temp = numbers[j];
         numbers[j] = numbers[k];
         numbers[k] = temp;
@@ -71,7 +72,7 @@ public class QuickSort {
 
     public static void main(String args[]) {
         QuickSort quickSort = new QuickSort();
-//        int[] numbers = new int[]{2, 5, 7, 2, 4, 2, 8, 1, 0, 9, 3, 6};
+        // int[] numbers = new int[]{2, 5, 7, 2, 4, 2, 8, 1, 0, 9, 3, 6};
         int[] numbers = new int[]{4, 5, 33, 17, 3, 21, 1, 16};
         quickSort.sort(numbers);
         System.out.println(Arrays.toString(numbers));

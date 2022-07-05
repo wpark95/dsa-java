@@ -11,13 +11,14 @@ public class BinaryConvert {
     public static int convertFromBinary(String binary){
         int conversion = 1;
         int result = 0;
-/*        for (int i = 1; i <= binary.length(); i++) {
+        /*
+        for (int i = 1; i <= binary.length(); i++) {
             if (binary.charAt(binary.length() - i) == '1')
                 result += conversion;
             conversion *= 2;
         }
         */
-// I prefer this...decrement from last element
+        // this could be a preferred solution: decrement from last element
         for (int i = binary.length()-1; i>=0; i-- ){
             System.out.println("i is " + i);
             if (binary.charAt(i) == '1'){
@@ -29,7 +30,7 @@ public class BinaryConvert {
     }
 
     public static int convertFromOctal(String octal) {
-// implement here, return decimal int converted from octal String
+        // TODO-Lab1.2: return calculated decimal value converted from octal String
         return 0;
     }
 

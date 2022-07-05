@@ -13,6 +13,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
     }
 
     public void put(K key, V value) {
+        // TODO-Lab2.7: Implement the logic below
         // 1. get the int hash value by calling the hashKey( ) method of the hashProvider
         // passing to it the key argument and the length of the array
         // because this is a remainder hash, this method will return a number
@@ -23,6 +24,7 @@ public class ChainedHashTable<K, V> implements HashTable<K, V> {
     }
 
     public V get(K key) {
+        // TODO-Lab2.7: Implement the logic below
         // 1. get the int hash value by calling the hashKey( ) method of the hashProvider
         // passing to it the key argument and the length of the array
         // because this is a remainder hash, this method will return a number

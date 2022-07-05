@@ -10,16 +10,16 @@ public class BubbleSort {
        System.out.println(Arrays.toString(input));
     }
 
-/*
-bubbleSort(array)
-   n = length(array)
-   for (k = 1 until n)
-   for (j = 0 until length-1)
-     if(array[j] > array[j + 1])
-       swap(array, j, j + 1)
-*/
+    /*
+    bubbleSort(array)
+       n = length(array)
+       for (k = 1 until n)
+         for (j = 0 until length-1)
+           if(array[j] > array[j + 1])
+             swap(array, j, j + 1)
+    */
     public static void sort(int[] numbers){
-    // implement pseudo-code above
+       // TODO-Lab2.1: implement pseudo-code above
     }
     
 }

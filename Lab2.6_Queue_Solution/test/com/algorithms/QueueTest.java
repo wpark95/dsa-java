@@ -7,17 +7,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 public class QueueTest {
-    //TODO create a Queue test fixture reference
+
     Queue<Customer> queue = null;
     @Before
     public void setUp() throws Exception {
-        //TODO instantiate the queue test fixture
-        //TODO populate with one customer object
         queue = new Queue<>();
         queue.enqueue(new Customer(12345, "Andrew Smith", 255));
     }
-
-    //TODO design and implement positive and negative tests and give them decent names
 
     @Test
     public void enqueueToNonEmptyQueuePositive() {

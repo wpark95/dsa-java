@@ -16,7 +16,8 @@ public class Intersection {
     }
 
 	public List<Integer> intersectionFast(int[]a, int[]b){
-		return null;
+		// TODO-Lab1.4: Implement fast intersection logic here
+        return null;
 	}
 
     public static void main(String args[]) {

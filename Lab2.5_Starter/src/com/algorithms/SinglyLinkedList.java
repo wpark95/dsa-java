@@ -39,11 +39,11 @@ public class SinglyLinkedList<V> {
     }
 
     public void reverseRecursively(){
-
+        // TODO-Lab2.5: Invoke private method with proper arguments
     }
 
     private void reverse(LinkedListNode<V> node){
-
+        // TODO-Lab2.5: Implement logic here
     }
 
     public int traverseList(boolean print){
