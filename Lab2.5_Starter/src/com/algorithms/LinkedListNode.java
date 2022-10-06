@@ -3,6 +3,7 @@ package com.algorithms;
 import java.util.Optional;
 
 public class LinkedListNode<V> {
+
     private V value;
     private LinkedListNode<V> next;
 

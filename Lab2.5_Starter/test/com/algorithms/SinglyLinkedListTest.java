@@ -21,7 +21,23 @@ public class SinglyLinkedListTest {
         custList.addFront(new Customer(78901, "Gregory Smith", 855));
     }
 
-    // TODO-Lab2.5: design and implement "addFront" tests if time permits
+    @Test
+    public void addFront() {
+        LinkedListNode<Customer> customer = custList.getHead();
+        assertEquals("Gregory Smith", customer.getValue().getName());
+        customer = customer.getNext();
+        assertEquals("Francie Smith", customer.getValue().getName());
+        customer = customer.getNext();
+        assertEquals("Edward Smith", customer.getValue().getName());
+        customer = customer.getNext();
+        assertEquals("Dora Smith", customer.getValue().getName());
+        customer = customer.getNext();
+        assertEquals("Charlie Smith", customer.getValue().getName());
+        customer = customer.getNext();
+        assertEquals("Betty Smith", customer.getValue().getName());
+        customer = customer.getNext();
+        assertEquals("Andrew Smith", customer.getValue().getName());
+    }
 
     @Test
     public void deleteFrontPositive() {
@@ -62,8 +78,11 @@ public class SinglyLinkedListTest {
 
     @Test
     public void toStringPositive() {
-        // TODO-Lab2.5: implement this test if time permits
-
+        String expectedHeadString = "LinkedListNode{value=Customer{custNo=12345, name='Andrew Smith', balance=255.0}}";
+        custList = new SinglyLinkedList<>();
+        custList.addFront(new Customer(12345, "Andrew Smith", 255));
+        String actualHeadString = custList.getHead().toString();
+        assertEquals(expectedHeadString, actualHeadString);
     }
 
 }

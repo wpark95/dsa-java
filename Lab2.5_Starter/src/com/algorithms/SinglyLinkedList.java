@@ -3,14 +3,14 @@ package com.algorithms;
 import java.util.Optional;
 
 public class SinglyLinkedList<V> {
-    private LinkedListNode<V> head;
-    public SinglyLinkedList() {
 
+    private LinkedListNode<V> head;
+
+    public SinglyLinkedList() {
         head = null;
     }
 
     public void addFront(V item) {
-
         this.head = new LinkedListNode<>(item, head);
     }
 
@@ -21,36 +21,39 @@ public class SinglyLinkedList<V> {
 //                orElse(null);
         // if firstNode's value is not null, use it to get the next node and
         // assign it to head.  If it is null, assign null to head
-        if (firstNode!=null){
+        if (firstNode != null) {
             LinkedListNode<V> node = head.getNext();
-            if (node!=null){
+            if (node != null) {
                 this.head.setNext(null);
                 this.head = node;
-            }
-            else{
+            } else {
                 this.head = null;
             }
         }
- //       firstNode.ifPresent(n -> n.setNext(null));
+        //       firstNode.ifPresent(n -> n.setNext(null));
     }
 
-    public LinkedListNode<V> getHead(){
+    public LinkedListNode<V> getHead() {
         return head;
     }
 
-    public void reverseRecursively(){
-        // TODO-Lab2.5: Invoke private method with proper arguments
+    public void reverseRecursively() {
+        reverse(getHead());
     }
 
-    private void reverse(LinkedListNode<V> node){
-        // TODO-Lab2.5: Implement logic here
+    private void reverse(LinkedListNode<V> node) {
+        if (node == null) { // Base case
+            return;
+        }
+        reverse(node.getNext());
+        System.out.println(node.getValue());
     }
 
-    public int traverseList(boolean print){
+    public int traverseList(boolean print) {
         int count = 0;
         LinkedListNode<V> curNode = getHead();
-        while(curNode!=null){
-            if(print) {
+        while (curNode != null) {
+            if (print) {
                 System.out.println(curNode.toString());
             }
             curNode = curNode.getNext();
@@ -63,17 +66,17 @@ public class SinglyLinkedList<V> {
     public String toString() {
         StringBuilder builder = new StringBuilder();
         LinkedListNode<V> cur = head;
-        while(cur != null){
+        while (cur != null) {
             builder.append(cur);
             builder.append("\n");
             LinkedListNode<V> next = cur.getNext();
-            if(next!=null){
+            if (next != null) {
                 cur = next;
-            }
-            else{
+            } else {
                 cur = null;
             }
         }
         return builder.toString();
     }
+
 }

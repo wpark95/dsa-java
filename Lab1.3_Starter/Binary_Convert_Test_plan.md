@@ -10,7 +10,7 @@
   ```
 
 - Success paths
-  - Test each numeric position in the string.  
+  - Test each numeric position in the string.
      May be done in a single method, loop through array values
 - Failure path(s)
   - null string? 
